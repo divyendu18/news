@@ -14,6 +14,8 @@ const NewStories=() =>{
       setOffset(offset+10);
       setLimit(limit+10);
     }
+    // console.log(offset);
+    // console.log(limit);
 
     useEffect(() => {
         fetch('https://hacker-news.firebaseio.com/v0/newstories.json?print=pretty')
@@ -34,9 +36,14 @@ const NewStories=() =>{
       }else{
         return(
         <div>
-          <h2 style={{padding:'1rem'}}>Recent Stories...</h2>
+           <h2 style={{padding:'1rem'}}>Recent Stories...</h2>
+           <div className="card-design">
+          <div className="vertical"/>
+          <div className="cards-column">
             {data && data.splice(offset,limit).map((item,index) => <NewStoriesCards key={index} id={item}/>)}
-          {data && <button className="load_more" onClick={handleClick}>Load more...</button>}
+            {data && <button className="load_more" onClick={handleClick}>LOAD MORE</button>}
+            </div>
+            </div>
         </div>)}
 }
 

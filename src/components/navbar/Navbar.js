@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className="navbar">
             <div className="head">
-                <h1><span className="tag">Hacker</span>News</h1>
+            <h1 style={{color:'white'}}>prime<span className="tag">Time.</span></h1>
             </div>
             <div>
             <Hamburger/>

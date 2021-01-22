@@ -3,16 +3,18 @@ import Moment from 'react-moment';
 
 const TopStoriesCard=(props) =>{ 
   return (
-    <div className="container">
     <div className="card">
-      <div className="header">
-        <a href={props.url} className="url"><p className="title">{props.title}</p></a>
-      </div>
-      <div className="text">
-        <p className="author">By: {props.author} | <Moment fromNow>{new Date(props.time*1000)}</Moment></p>            
-      </div>
+      <div className="vertical_card"></div>
+    <div className="header_date">
     </div>
-</div>
+    <div className="header_title">
+      <h4 className="title"><a href={props.url} className="url">{props.title}</a></h4>
+      {/* <div className="horizontal"></div> */}
+      <div className="author">Posted by<p>{props.author}</p></div>
+      <h5><Moment fromNow>{new Date(props.time*1000)}</Moment></h5>
+      
+    </div>
+  </div>
 
   )
 }

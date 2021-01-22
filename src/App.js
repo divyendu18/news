@@ -7,14 +7,22 @@ import AskStories from './components/askStories/AskStories';
 import Navbar from './components/navbar/Navbar';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import { BackTop } from 'antd';
-
+import Footer from './components/footer/Footer';
+import ExpandLessIcon from '@material-ui/icons/ExpandLess';
+import DateTime from './components/date';
 
 const App=() =>{    
     return (
         <Router>
         <div className="App">
+            <div className="landing_page">
             <Navbar/>
-            <Switch>
+            <div className="centered_title">
+            <h1>prime<span className="tag">Time.</span></h1>
+            <h5><DateTime/></h5>
+            </div>
+            </div>
+           <Switch>
                 <Route exact path="/"><NewStories/></Route>
                 <Route exact path="/topStories"><TopStories/></Route>
                 <Route exact path="/bestStories"><BestStories/></Route>
@@ -22,14 +30,15 @@ const App=() =>{
             </Switch>
             <div className="foot">
                 <BackTop>
-                <div className="">
-                    <img src='https://i.postimg.cc/44Ytsk8Z/top-arrow-emoj.png' alt='Go to top'/>
+                <div className="backicon">
+                    <ExpandLessIcon/>
                 </div></BackTop>
-                <footer>DJ { new Date().getFullYear() } </footer>
             </div>
+            <Footer/>
             
         </div>
         </Router>
+
     )
 }
 
