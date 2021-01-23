@@ -31,8 +31,8 @@ const TopStories=() =>{
         <><img src={Loading} alt="" className="loading"/></>)
       }else{
         return(
-        <div>
-          <h3 style={{padding:'1rem'}}>Top Stories</h3>
+        <div className="card_cover">
+          <h2>Top Stories</h2>
           <div className="card-design">
           <div className="cards-column">
             {data && data.splice(offset,limit).map((item,index) => <TopStoriesCards key={index} id={item}/>)}

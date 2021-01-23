@@ -9,9 +9,7 @@ const BestStoriesCard=(props) =>{
           </div>
           <div className="header_title">
             <h4 className="title"><a href={props.url} className="url">{props.title}</a></h4>
-            <div className="author">Posted by<p>{props.author}</p></div>
-            <h5><Moment fromNow>{new Date(props.time*1000)}</Moment></h5>
-            
+            <div className="author">Posted by :<p><span className="author_">{props.author} </span> | <Moment fromNow>{new Date(props.time*1000)}</Moment></p></div>
           </div>
         </div>
 
