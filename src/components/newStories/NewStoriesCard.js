@@ -11,11 +11,8 @@ const NewStoriesCard=(props) =>{
           </div>
           <div className="header_title">
             <h4 className="title"><a href={props.url} className="url">{props.title}</a></h4>
-            {/* <div className="horizontal"></div> */}
             <div className="author">Posted by<p>{props.author}</p></div>
-            <h5><Moment fromNow>{new Date(props.time*1000)}</Moment></h5>
-
-            
+            <h5><Moment fromNow>{new Date(props.time*1000)}</Moment></h5>    
           </div>
         </div>
 

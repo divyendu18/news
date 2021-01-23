@@ -9,7 +9,7 @@ export const DateTime = () => {
 
     useEffect(() => {
         let curDate = new Date();
-        let res = monthNames[curDate.getMonth()] + " " + curDate.getDate()+" ,"+curDate.getFullYear();
+        let res = monthNames[curDate.getMonth()] + " " + curDate.getDate()+", "+curDate.getFullYear();
         setDate(res);
     }, [date]);
 

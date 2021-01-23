@@ -38,7 +38,6 @@ const NewStories=() =>{
         <div>
            <h2 style={{padding:'1rem'}}>Recent Stories...</h2>
            <div className="card-design">
-          <div className="vertical"/>
           <div className="cards-column">
             {data && data.splice(offset,limit).map((item,index) => <NewStoriesCards key={index} id={item}/>)}
             {data && <button className="load_more" onClick={handleClick}>LOAD MORE</button>}
